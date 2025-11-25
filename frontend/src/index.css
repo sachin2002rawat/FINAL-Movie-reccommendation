@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.demo1{
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #8ca24b 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Modern dark gradient colors */
+  background: linear-gradient(90deg, #1e8a40, #1d3f7f, #641011);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+header p {
+  font-size: 1.2rem;
+  background: linear-gradient(270deg, #1e3a8a, #7f1d1d, #4b1064, #1e40af, #b91c1c);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 8s ease infinite;
+  opacity: 0.9;
+}
+
+/* Gradient Animation Keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+main {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.movie-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+button {
+  background: linear-gradient(135deg, #1e293b, #3b0764);
+  color: #f1f5f9;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #334155, #581c87);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.error {
+  background: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c33;
+}
+.movies {
+  display: grid;
+  gap: 20px;
+}
+
+.movie-card {
+  background: rgba(30, 41, 59, 0.85); 
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 5px solid;
+  border-image: linear-gradient(180deg, #3b82f6, #8b5cf6, #ec4899) 1;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.movie-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.movie-card h3 {
+  color: #f1f5f9; /* light text */
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.movie-card .year {
+  color: #94a3b8; 
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.movie-card .reason {
+  color: #cbd5e1; 
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 20px;
+  }
+}
