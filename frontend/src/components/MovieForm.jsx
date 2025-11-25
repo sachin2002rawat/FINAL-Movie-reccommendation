@@ -16,7 +16,7 @@ function MovieForm({ onRecommendations, onError, onLoading }) {
     onError(null)
 
     try {
-      const response = await axios.post('http://localhost:5000/api/recommend', {
+      const response = await axios.post('https://final-movie-reccommendation.onrender.com/api/recommend', {
         userInput: input.trim()
       })
 
